@@ -1,0 +1,36 @@
+# FMV Intelligence Pipeline — Python dependencies
+# Install: pip install -r requirements.txt
+
+# ── Core detection ────────────────────────────────────
+ultralytics>=8.3.0          # YOLO v11/v12
+
+# ── Video & image processing ─────────────────────────
+opencv-python-headless>=4.10.0
+numpy>=1.26.0
+
+# ── MISB/KLV metadata ────────────────────────────────
+klvdata>=0.8.0
+
+# ── Geospatial ────────────────────────────────────────
+rasterio>=1.3.0             # Raster ingest + CRS back-projection (Task #4)
+geopandas>=0.14.0           # Vector context layer
+shapely>=2.0.0
+geojson>=3.1.0
+pyproj>=3.6.0
+
+# ── Frontier model clients ────────────────────────────
+anthropic>=0.34.0           # Claude (Haiku Tier 1 / Opus Tier 2)
+openai>=1.40.0              # GPT-4o mini / GPT-4o (optional swap)
+
+# ── Async & networking ────────────────────────────────
+aiohttp>=3.9.0
+fastapi>=0.112.0            # REST control plane (cloud phase)
+uvicorn>=0.30.0
+
+# ── Messaging (cloud phase) ───────────────────────────
+confluent-kafka>=2.5.0      # Kafka producer for AlertEmitter
+
+# ── Tracking (production swap for SimpleTracker) ─────
+# Uncomment when ready to move beyond POC:
+# supervision>=0.22.0       # ByteTrack via Roboflow supervision
+# boxmot>=10.0.0            # Multi-algorithm tracker suite
