@@ -137,4 +137,4 @@ python fmv_pipeline.py path/to/airport.png --tiling --no-frontier
 
 ## License
 
-MIT
+Copyright 2026 doppiomacchiatto. Licensed under the [Apache License, Version 2.0](LICENSE).
